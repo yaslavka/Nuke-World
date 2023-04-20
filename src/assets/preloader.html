@@ -1,0 +1,192 @@
+<!doctype html>
+<html style="font-size: 4px;" lang=""><head><meta name="viewport" content="width=device-width,height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"><link rel="apple-touch-icon" sizes="180x180" href="/GameContainers/Slot/HTML5/Evoplay/NukeWorld/Client/game//distribution/favicon//apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/GameContainers/Slot/HTML5/Evoplay/NukeWorld/Client/game//distribution/favicon//favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/GameContainers/Slot/HTML5/Evoplay/NukeWorld/Client/game//distribution/favicon//favicon-16x16.png"><link rel="manifest" href="/GameContainers/Slot/HTML5/Evoplay/NukeWorld/Client/game//distribution/favicon//site.webmanifest"><meta name="apple-mobile-web-app-title" content="null"><meta name="application-name" content="null"><meta name="msapplication-TileColor" content="#da532c"><meta name="theme-color" content="#ffffff"><title>Nuke World</title></head>
+<body style="background: rgb(0, 0, 0); margin: 0px; overflow: hidden;"><div class="preloader js-preloader">
+    <style>
+
+        .logo-container {
+            display: block;
+        }
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 1px;
+            opacity:1;
+
+            z-index: 1000;
+            background: rgba(0, 0, 0, 1) no-repeat 50% 50%;
+            background-size: cover;
+        }
+
+        .preloader-logo-evoplay {
+            position: absolute;
+            width: 35%;
+            left: 50%;
+            top: 27%;
+            transform: translate(-50%, 0);
+            -webkit-transform: translate(-50%, 0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        @media screen and (orientation: portrait) {
+            .preloader-logo-evoplay {
+                width: 55%;
+            }
+        }
+
+        .logo-container svg {
+            overflow: hidden
+        }
+
+        .preloader-progress {
+            position: absolute;
+            bottom: 12%;
+            left: 50%;
+            width: 30%;
+            height: 3px;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+        }
+
+        .preloader-progress_back {
+            position: absolute;
+            bottom: 12%;
+            left: 50%;
+            width: 30%;
+            height: 3px;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+        }
+
+        .preloader-progress__bar_back{
+            width: 100%;
+            height: 100%;
+            background: #252525;
+        }
+
+        .preloader-progress__bar{
+            width: 0;
+            height: 100%;
+            background: #1f80ea;
+            -webkit-transition: width 2s;
+            transition: width 2s;
+        }
+
+        @keyframes preloader-exit {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .black {
+            position: absolute;
+            left: -1000px;
+            width: 1005px;
+            height: 100%;
+            background-color: #000000;
+        }
+
+        @keyframes show {
+            0% { opacity: 0; }
+            50% { opacity: 1;}
+            100% { opacity: 1; }
+        }
+        @keyframes e_move {
+            0% {
+                transform: translateX(45%);
+                -webkit-transform: translateX(45%);
+            }
+            50% {
+                transform: translateX(45%);
+                -webkit-transform: translateX(45%);
+            }
+            100% {
+                transform: translateX(0%);
+                -webkit-transform: translateX(0%);
+            }
+        }
+        @keyframes logo_move {
+            0% {
+                transform: translateX(-400px);
+                -webkit-transform: translateX(-400px);
+            }
+            50% {
+                transform: translateX(-400px);
+                -webkit-transform: translateX(-400px);
+            }
+            100% {
+                transform: translateX(0px);
+                -webkit-transform: translateX(0px);
+            }
+        }
+
+        .logo_symbol, .evoplay_word {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
+        .st2{fill:#FFFFFF;}
+        .st0{fill:#FFFFFF;}
+        .st1{fill:#00B9FF;}
+
+        .preloader-exit {
+            opacity: 0;
+            animation: 1.2s preloader-exit ease-in-out;
+        }
+    </style>
+
+    <div class="preloader-logo-evoplay" id="evoplayLogo">
+        <div class="logo-container" style="animation: show 2s ease-in-out 1 ;">
+            <div class="evoplay_word" style="animation: logo_move 2s cubic-bezier(0.4, 0, 0.2, 1);">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 544 90">
+                    <g id="evoplay">
+                        <polygon class="st0" points="166.1,65.3 131.8,65.3 131.8,55.2 149.7,55.2 155.6,41.2 131.8,41.2 131.8,31.6 159.7,31.6 166,16.6
+                166,16.5 114.3,16.5 114.3,80.4 166.1,80.4"></polygon>
+                        <path class="st0" d="M354.9,22.5c-4.8-4-11.2-6-19.4-6h-27.4v63.9h17.7V62.1h8.8c8.2,0,14.8-2,19.9-6c5-4,7.6-9.7,7.6-17
+                C362.1,32,359.7,26.5,354.9,22.5z M341.7,46c-1.8,1.5-4.3,2.3-7.4,2.3h-8.4V31.4h8.3c3.2,0,5.7,0.7,7.5,2.1
+                c1.8,1.4,2.7,3.5,2.7,6.3C344.4,42.4,343.5,44.5,341.7,46z"></path>
+                        <polygon class="st0" points="386,64.9 386,16.5 368.3,16.5 368.3,80.4 407.4,80.4 414,64.9"></polygon>
+                        <path class="st0" d="M461.2,16.1h-17.1l-22.9,54.1l-4.3,10.3h6h12.7l4.6-11.4h24.6l4.7,11.4h19L461.2,16.1z M445.3,55.2l7.2-18.2
+                l7.1,18.2H445.3z"></path>
+                        <polygon class="st0" points="524.2,16.5 511,39.8 497.8,16.5 477.6,16.5 501.9,56.5 501.9,80.4 519.7,80.4 519.7,56.2 544,16.5
+                "></polygon>
+                        <polygon class="st0" points="218.4,16.5 203.9,56.9 189.4,16.5 169.6,16.5 195.5,80.9 211.9,80.9 237.8,16.5"></polygon>
+                        <path class="st0" d="M267.8,15.4c-18.3,0-33.2,14.9-33.2,33.2c0,18.3,14.9,33.2,33.2,33.2S301,66.9,301,48.6
+                C301,30.2,286.1,15.4,267.8,15.4z M267.8,66c-9.6,0-17.4-7.8-17.4-17.4c0-9.6,7.8-17.4,17.4-17.4c9.6,0,17.4,7.8,17.4,17.4
+                C285.2,58.2,277.4,66,267.8,66z"></path>
+                    </g>
+                </svg>
+            </div>
+            <div class="logo_symbol" style="animation: e_move 2s cubic-bezier(0.4, 0, 0.2, 1);">
+                <div class="black"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 544 90">
+                    <g id="e_symbol">
+                        <polygon id="black" points="0,0 0,98 51,98 93,-1"></polygon>
+                        <polygon class="st1" points="0.3,89.3 54.6,89.3 62.6,70.5 0.3,70.5 "></polygon>
+                        <polygon class="st1" points="0.3,66.9 68.2,57.5 76.8,37.1 0.3,47.8"></polygon>
+                        <polygon class="st1" points="0.3,24.4 0.3,44.1 82.8,22.9 92.5,0.2"></polygon>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="preloader-progress">
+        <div class="preloader-progress__bar_back"></div>
+    </div>
+    <div class="preloader-progress">
+        <div class="preloader-progress__bar js-preloader-bar"></div>
+    </div>
+</div>
+
+
+</body></html>
